@@ -1,0 +1,37 @@
+button{
+    border-radius: 20px;
+    position: relative;
+    top: -2px;
+}
+
+button:hover{
+    color: darkblue;
+    background-color: rgb(210, 171, 171);
+
+}
+
+.ss{
+    position: relative;
+    top: -12px;
+}
+.wait{
+    margin-left: 2px;
+    margin-top: -10px;
+
+}
+.fd{
+    position: relative;
+    top: -12px;
+}
+
+.cards:hover .card{
+    filter: blur(5px);
+
+}
+
+.cards .card:hover{
+    filter: blur(0px);
+    transform: scale(1.1,1.1);
+    transform: translateY(10px);
+
+}

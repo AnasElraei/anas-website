@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        footer {
+            background-color: #302c2c;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cards {
+            margin-left: 100px;
+            margin-top: 20px;
+            gap: 30px;
+            flex-wrap: wrap;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            perspective: 1000px;
+            box-shadow: 0 0 0 5px #ffffff80;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card svg {
+            width: 48px;
+            fill: #333;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+        }
+
+        .card__content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f2f2f2;
+            transform: rotateX(-90deg);
+            transform-origin: bottom;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card:hover .card__content {
+            transform: rotateX(0deg);
+        }
+
+        .card__title {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .card:hover svg {
+            scale: 0;
+        }
+
+        .card__description {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #777;
+            line-height: 1.4;
+        }
+
+        button{
+            margin-top: -24px;
+            border-radius: 20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="anas.css">
+</head>
+
+<body style="background-color: rgb(75, 66, 66);">
+
+    <nav class="navbar navbar-expand-lg navbar-dark text-light bg-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">soft <span style="color: blanchedalmond;">tech</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index3.html">products</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            contact
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="index1.html">signin</a></li>
+                            <li><a class="dropdown-item" href="index2.html">signup</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- __cards_____________________________________ -->
+    <div class="cards">
+        <div class="card">
+            <img src="51rrgRcaM+L._AC_SX300_SY300_.jpg" alt="">
+            <path
+                d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
+            </path>
+            </svg>
+            <div class="card__content">
+                <p class="card__title">hp</p>
+                <p class="card__description">Victus Gaming Laptop By HP 15-FB0036NE (7G6G5EA), AMD Ryzen 5 5600H, 8GB DDR4 3200 DIMM, 1 TB SSD <h5>EGP27,999.00</h5></p>
+                <button>add to cart</button>
+            </div>
+        </div>
+        <!-- card 2 -->
+
+        <div class="card">
+            <img src="71BWKAYWu6L.__AC_SY300_SX300_QL70_ML2_.jpg" alt="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                    d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
+                </path>
+            </svg>
+            <div class="card__content">
+                <p class="card__title">hp</p>
+                <p class="card__description">HP Gaming Laptop - 11th Intel Core i5-11300H,8GBRAM,1TBHDD+256GBSSD, NVIDIA GeForce GTX 1650 4GB GDDR6 Graphics, IPS 144 Hz</p><h5>EGP34,555.00</h5>
+
+                <button class="wait">add to cart</button>
+            </div>
+        </div>
+
+        <!-- card 3 -->
+
+        <div class="card">
+            <img src="61U1qNsKKIL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                    d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
+                </path>
+            </svg>
+            <div class="card__content">
+                <p class="card__title">hp</p>
+                <p class="card__description">(12th Generation Intel® Core™ i7-1255U -Ram 16 GB -Hard 512 GB PCIe® NVMe™ SSD - GPU NVIDIA® GeForce® MX570 (2 GB) FHD IPS <h5>EGP41,199.00</h5></p>
+                <button class="fd">add to cart</button>
+            </div>
+        </div>
+
+        <!-- cars4 -->
+
+        <div class="card">
+            <img src="41nsdhIdyqL._AC_UL320_.jpg" alt="">
+            <path
+                d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
+            </path>
+            </svg>
+            <div class="card__content">
+                <p class="card__title">hp</p>
+                <p class="card__description">HP Laptop 15S-FQ5000NIA (6G3G5EA), Intel Core i3-1215U, 12th Generation, 4GB DDR4-3200 MHz RAM (1 x 4GB), 256GB PCIe NVMe M.2 SSD <h5>EGP15,999.00</h5>
+                    <button>add to cart</button>
+                </p>
+            </div>
+        </div>
+
+
+        <!-- card5 -->
+
+
+        <div class="card">
+            <img src="61clOSUCrfL._AC_UL320_.jpg" alt="">
+            <path
+                d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
+            </path>
+            </svg>
+            <div class="card__content">
+                <p class="card__title">hp </p>
+                <p class="card__description">13th Intel Core i9-13900H, NVIDIA GeForce RTX 4060 8GB GDDR6 Graphics, 16GB DDR5-5200 RAM, 1TB SSD, 120Hz Windows 11 <h5>EGP109,166.40</h5>
+                    <button>add to cart</button>
+                </p>
+            </div>
+        </div>
+
+
+
+        <!-- card6 -->
+
+
+
+
+        <div class="card">
+            <img src="61UY5LzzA0L._AC_UL320_.jpg" alt="">
+            <path
+                d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
+            </path>
+            </svg>
+            <div class="card__content">
+                <p class="card__title">apple</p>
+                <p class="card__description">2021 Apple MacBook Pro (14-inch, Apple M1 Pro chip with 8â€‘core CPU and 14â€‘core GPU, 16GB RAM, 512GB SSD) - <h5>EGP99,950.00</h5></p>
+                <button style="margin-top: -30px;">add to cart</button>
+            </div>
+        </div>
+
+        <!-- card7 -->
+
+        <div class="card">
+            <img src="710-zIN6mML._AC_SL1500_.jpg" alt="">
+            <path
+                d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
+            </path>
+            </svg>
+            <div class="card__content">
+                <p class="card__title">Apple</p>
+                <p class="card__description">Apple 2022 MacBook Air laptop with M2 chip: 13.6-inch Liquid Retina display, 8GB RAM, 256GB SSD storage, 1080p FaceTime HD camera. <h5>EGP66,360.00</h5>                <button style="margin-top:-60px; border-radius: 20px;">add to cart</button>
+                </p>
+            </div>
+        </div>
+
+
+        <!-- card8 -->
+
+        <div class="card">
+            <img src="71PWU942AIL._AC_SX569_.jpg" alt="">
+            <path
+                d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
+            </path>
+            </svg>
+            <div class="card__content">
+                <p class="card__title">apple</p>
+                <p class="card__description">13-inch MacBook Air: Apple M2 chip with 8-core CPU and 10-core GPU, 512GB - Space Grey <h5>EGP 85,999.00</h5>
+                    
+                </p>
+                <button>add to cart</button>
+            </div>
+        </div>
+
+
+        <!-- card 9 -->
+
+        <div class="card">
+            <img src="61lYIKPieDL._AC_UL320_.jpg" alt="">
+            <path
+                d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
+            </path>
+            </svg>
+            <div class="card__content">
+                <p class="card__title">apple</p>
+                <p class="card__description">Apple 2023 MacBook Pro laptop with Apple M2 Pro chip with 12 core CPU and 19 core GPU: 14.2-inch Liquid Retina XDR display, 16GB, 1TB SSD storage <h5>EGP149,999.00</h5>
+                </p>
+                <button class="ss">add to cart</button>
+            </div>
+        </div>
+
+
+
+        <!-- card10 -->
+        <div class="card">
+            <img src="71MsP1df6DL._AC_SX569_.jpg" alt="">
+            <path
+                d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
+            </path>
+            </svg>
+            <div class="card__content">
+                <p class="card__title">apple</p>
+                <p class="card__description">Apple 2023 MacBook Air laptop with M2 chip: 15.3-inch Liquid Retina display, 8GB GB RAM, 256GB;GB SSD storage <h5>EGP 79,950.00</h5>
+                </p>
+                <button>add to cart</button>
+            </div>
+        </div>
+
+
+
+        <!-- card11 -->
+
+        <div class="card">
+            <img src="61YEZ-ABalL._AC_UL320_.jpg" alt="">
+            <path
+                d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
+            </path>
+            </svg>
+            <div class="card__content">
+                <p class="card__title">dell</p>
+                <p class="card__description">Gaming Laptop - 11th Intel Core i7-11800H 8-Cores, 16GB RAM, 512GB SSD,NVIDIAGeforceRTX30504GBGDDR6Graphics<h5>EGP43,890.00</h5></p>
+                <button>add to cart</button>
+                </p>
+            </div>
+        </div>
+
+        <!-- card12 -->
+        <div class="card">
+            <img src="51bVVaTp0dL._AC_UL320_.jpg" alt="">
+            <path
+                d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
+            </path>
+            </svg>
+            <div class="card__content">
+                <p class="card__title">dell</p>
+                <p class="card__description">ELL G15 5530 Gaming Laptop 13th Intel Core i7-13650HX 14 Cores, NVIDIA GeForce RTX 4060 8GB GDDR6 Graphics, 16GB DDR5 RAM, 512GB SSD <h5>EGP72,847.71</h5>
+                    <button>add to cart</button>
+                </p>
+            </div>
+        </div>
+        <!-- card13 -->
+        <div class="card">
+            <img src="71UhGprKPtL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="">
+            <path
+                d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
+            </path>
+            </svg>
+            <div class="card__content">
+                <p class="card__title">dell</p>
+                <p class="card__description">Dell XPS 13 Plus 9320 – 13.4" 3.5K(3456 x 2160) OLED Touch-Screen Laptop – 12-core 12th Gen Intel Evo i7-1260P - 16GB Memory - 1TB SSD - 2xThunderbolt 4 - Windows 11
+                    Brand: Dellj5 <h5>99,999.00EGP</h5>
+                    <button>add to cart</button>
+                </p>
+            </div>
+        </div>
+        <!-- cars14 -->
+        <div class="card">
+            <img src="51LzlKYzDtL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="">
+            <path
+                d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
+            </path>
+            </svg>
+            <div class="card__content">
+                <p class="card__title">dell</p>
+                <p class="card__description">Dell Xps 15 9520 i7-12700H 32GB 1TB SSD 4GB RTX3050Ti 15.6 FHD+ Windows 11 Pro XPS95202200WP   <h5>127,999.00EGP</h5>
+                    <button>add to cart</button>
+                </p>
+            </div>
+        </div>
+
+        <!-- card15 -->
+        <div class="card">
+            <img src="71vJS1BedWL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="">
+            <path
+                d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z">
+            </path>
+            </svg>
+            <div class="card__content">
+                <p class="card__title">dell</p>
+                <p class="card__description">13th Intel Core i5-1335U 10 Cores, 8GB DDR5 RAM, 512GB SSD, Intel Iris Graphics, 14" FHD  <h5>37,819 EGP</h5>
+                    <button>add to cart</button>
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <footer>
+        <p>&copy;by ANAS ELRA3I ALL COPY RIGHT 2024
+        </p>
+    </footer>
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
